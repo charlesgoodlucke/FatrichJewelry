@@ -147,7 +147,7 @@ let activeModalProduct = null;
 let activeModalQty = 1;
 
 // WhatsApp Shop Configuration
-const WHATSAPP_PHONE = "971500000000"; // Placeholder Dubai WhatsApp phone number
+const WHATSAPP_PHONE = "971525863460"; // Placeholder Dubai WhatsApp phone number
 
 // DOM Elements
 document.addEventListener("DOMContentLoaded", () => {
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCatalog();
   setupEventListeners();
   setupScrollReveal();
-  
+
   // Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
@@ -189,9 +189,9 @@ function renderCatalog() {
   // Filter products
   let filtered = PRODUCTS.filter(product => {
     const matchesCategory = currentFilter === "all" || product.category === currentFilter;
-    const matchesSearch = product.name.toLowerCase().includes(currentSearch.toLowerCase()) || 
-                          product.category.toLowerCase().includes(currentSearch.toLowerCase()) ||
-                          product.description.toLowerCase().includes(currentSearch.toLowerCase());
+    const matchesSearch = product.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+      product.category.toLowerCase().includes(currentSearch.toLowerCase()) ||
+      product.description.toLowerCase().includes(currentSearch.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -213,7 +213,7 @@ function renderCatalog() {
   const summaryBanner = document.getElementById("active-results-summary");
   const summaryCount = document.getElementById("summary-count");
   const summaryText = document.getElementById("summary-text");
-  
+
   if (currentSearch.trim() !== "") {
     summaryBanner.classList.remove("hidden-summary");
     summaryCount.textContent = filtered.length;
@@ -271,7 +271,7 @@ function renderCatalog() {
 }
 
 // Shopping Cart Core Logic
-window.addToCart = function(productId, quantity = 1) {
+window.addToCart = function (productId, quantity = 1) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
 
@@ -293,7 +293,7 @@ window.addToCart = function(productId, quantity = 1) {
   showToast(`Added ${quantity} x ${product.name} to Cart`);
 };
 
-window.removeFromCart = function(productId) {
+window.removeFromCart = function (productId) {
   const item = cart.find(i => i.id === productId);
   cart = cart.filter(item => item.id !== productId);
   saveCart();
@@ -302,7 +302,7 @@ window.removeFromCart = function(productId) {
   }
 };
 
-window.updateCartQty = function(productId, newQty) {
+window.updateCartQty = function (productId, newQty) {
   if (newQty <= 0) {
     removeFromCart(productId);
     return;
@@ -386,7 +386,7 @@ function updateCartUI() {
 function toggleCartDrawer(open) {
   const drawer = document.getElementById("cart-drawer");
   const overlay = document.getElementById("cart-drawer-overlay");
-  
+
   if (open) {
     drawer.classList.add("open");
     overlay.classList.add("open");
@@ -409,7 +409,7 @@ function toggleMobileMenu(open) {
 }
 
 // Details Modal Core Logic
-window.openDetailsModal = function(productId) {
+window.openDetailsModal = function (productId) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product) return;
 
@@ -418,10 +418,10 @@ window.openDetailsModal = function(productId) {
 
   document.getElementById("modal-product-img").src = product.image;
   document.getElementById("modal-product-img").alt = product.name;
-  
+
   const categoryLabel = product.category === 'silver' ? 'Italian Silver 925' : product.category === 'gold' ? 'Pure Dubai Gold' : product.category;
   document.getElementById("modal-product-tag").textContent = categoryLabel;
-  
+
   document.getElementById("modal-product-title").textContent = product.name;
   document.getElementById("modal-product-price").textContent = `$${product.price.toLocaleString()}`;
   document.getElementById("modal-product-description").textContent = product.description;
@@ -491,7 +491,7 @@ function setupEventListeners() {
 
   document.getElementById("modal-qty-minus").addEventListener("click", () => adjustModalQty(-1));
   document.getElementById("modal-qty-plus").addEventListener("click", () => adjustModalQty(1));
-  
+
   document.getElementById("modal-add-to-cart-btn").addEventListener("click", () => {
     if (activeModalProduct) {
       addToCart(activeModalProduct.id, activeModalQty);
@@ -540,7 +540,7 @@ function setupEventListeners() {
 
       document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
       button.classList.add("active");
-      
+
       currentFilter = button.dataset.filter;
       renderCatalog();
     });
@@ -559,7 +559,7 @@ function setupEventListeners() {
   document.querySelectorAll(".collection-card").forEach(card => {
     card.addEventListener("click", () => {
       const category = card.dataset.category;
-      
+
       // Update filter pills active class
       document.querySelectorAll(".filter-pill").forEach(p => {
         if (p.dataset.filter === category) {
@@ -582,7 +582,7 @@ function setupEventListeners() {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const filterValue = link.dataset.filter;
-      
+
       // Update pills
       document.querySelectorAll(".filter-pill").forEach(p => {
         if (p.dataset.filter === filterValue) {
@@ -591,7 +591,7 @@ function setupEventListeners() {
           p.classList.remove("active");
         }
       });
-      
+
       currentFilter = filterValue;
       renderCatalog();
       document.getElementById("catalog").scrollIntoView({ behavior: "smooth" });
@@ -613,21 +613,21 @@ function setupEventListeners() {
     const finalMsg = `Hello Fatimah Jewellery, I would like to place an order on your store:\n\n${itemsText}\nSubtotal: $${total.toLocaleString()}\n\nPlease verify shipping details and total invoice details for checkout. Thank you!`;
     const encoded = encodeURIComponent(finalMsg);
     const checkoutUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
-    
+
     window.open(checkoutUrl, "_blank");
     showToast("Checkout string generated! Redirecting to WhatsApp...");
   });
 
   document.getElementById("checkout-direct-btn").addEventListener("click", () => {
     if (cart.length === 0) return;
-    
+
     // Simulate standard inquiry checkout invoice
     showToast("Preparing order invoice inquiry...");
     setTimeout(() => {
       cart = [];
       saveCart();
       toggleCartDrawer(false);
-      
+
       // Open modal-like notification
       alert("Inquiry Invoice Sent! Our team will contact you shortly to complete payment and shipping details.");
     }, 1000);
@@ -646,7 +646,7 @@ function setupEventListeners() {
   if (inquiryForm) {
     inquiryForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      
+
       const name = document.getElementById("form-name").value;
       const phone = document.getElementById("form-phone").value;
       const type = document.getElementById("form-type").value;
@@ -657,7 +657,7 @@ function setupEventListeners() {
       // Simulate API submit delay
       setTimeout(() => {
         inquiryForm.reset();
-        
+
         // Generate WhatsApp text for inquiry form too!
         const requestText = `Hello Fatimah Jewellery, I am requesting a consultation:\n\nName: ${name}\nWhatsApp: ${phone}\nInquiry Type: ${type}\nRequirements: ${message}`;
         const encoded = encodeURIComponent(requestText);
@@ -708,7 +708,7 @@ function showToast(message) {
 // Scroll Reveal Observer Setup
 function setupScrollReveal() {
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
-  
+
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
