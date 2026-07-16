@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fatrich Jewelry | Premium Italian Sterling Silver & Dubai Gold</title>
+  <meta name="description" content="Welcome to Fatrich Jewelry (Fatimah Jewellery by Fatrich Accessories Trading LLC). Award-winning global jeweler of the year in UAE. Explore exquisite Italian 925 Sterling Silver, custom Gold, fine Diamonds, and Luxury Watches. Worldwide delivery.">
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta property="og:title" content="Fatrich Jewelry | Premium Italian Sterling Silver & Dubai Gold">
+  <meta property="og:description" content="Discover premium Italian 925 sterling silver, Dubai gold, and luxury watches. Outstanding Nigerian Jeweler of the Year in UAE 2024.">
+  <meta property="og:image" content="/assets/images/logo.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Main CSS Link -->
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+  <!-- Sticky Luxury Header -->
+  <header id="main-header" class="header-glass">
+    <div class="header-container">
+      <div class="logo-area" id="brand-logo-trigger">
+        <img src="/assets/images/logo.png" alt="Fatrich Jewelry Logo" class="brand-logo">
+        <span class="brand-name">FATRICH <span class="accent-gold">JEWELRY</span></span>
+      </div>
+      
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#collections" class="nav-link">Collections</a>
+        <a href="#catalog" class="nav-link">Shop</a>
+        <a href="#brand-story" class="nav-link">Our Story</a>
+        <a href="#custom-order" class="nav-link">Wholesale & Custom</a>
+      </nav>
+
+      <!-- Utility Icons -->
+      <div class="utility-bar">
+        <button id="search-toggle-btn" class="utility-btn" aria-label="Toggle Search">
+          <i data-lucide="search"></i>
+        </button>
+        <button id="cart-toggle-btn" class="utility-btn cart-btn-badge" aria-label="Open Shopping Cart">
+          <i data-lucide="shopping-bag"></i>
+          <span id="cart-count-badge" class="cart-badge">0</span>
+        </button>
+        <button id="mobile-menu-btn" class="utility-btn mobile-toggle" aria-label="Toggle Mobile Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Inline Expandable Search Bar -->
+    <div id="search-dropdown-panel" class="search-panel hidden-panel">
+      <div class="search-input-wrapper">
+        <input type="text" id="catalog-search-input" placeholder="Search for silver rope, gold ring, luxury watches...">
+        <button id="search-clear-btn" aria-label="Clear Search"><i data-lucide="x"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-panel" class="mobile-nav-drawer">
+      <div class="mobile-nav-header">
+        <span class="brand-name">FATRICH <span class="accent-gold">JEWELRY</span></span>
+        <button id="mobile-menu-close" class="utility-btn" aria-label="Close Mobile Menu">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#collections" class="mobile-link">Collections</a>
+        <a href="#catalog" class="mobile-link">Shop Catalog</a>
+        <a href="#brand-story" class="mobile-link">Our Story</a>
+        <a href="#custom-order" class="mobile-link">Wholesale & Custom</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-overlay" style="background-image: linear-gradient(to bottom, rgba(13,13,14,0.7), rgba(13,13,14,0.95)), url('/assets/images/hero_bg.png');"></div>
+    <div class="hero-content">
+      <div class="hero-tagline reveal-anim">CRAFTED FOR GLOBAL EXCELLENCE</div>
+      <h1 class="hero-title reveal-anim delay-1">FATRICH <span class="accent-gold italic-title">Jewelry</span></h1>
+      <p class="hero-description reveal-anim delay-2">
+        Italian Sterling Silver (925), exquisite custom Gold, Diamonds, and Luxury Timepieces designed for the modern connoisseur. Award-winning craftsmanship from Dubai to the World.
+      </p>
+      <div class="hero-cta reveal-anim delay-3">
+        <a href="#catalog" class="btn btn-primary">Explore Shop</a>
+        <a href="#custom-order" class="btn btn-secondary">Wholesale Inquiries</a>
+      </div>
+    </div>
+    <div class="scroll-down-arrow">
+      <span>Scroll to Discover</span>
+      <i data-lucide="chevron-down" class="bounce-anim"></i>
+    </div>
+  </section>
+
+  <!-- Value & Credibility Stats Banner -->
+  <section id="stats-banner" class="stats-banner-section">
+    <div class="stats-container">
+      <div class="stat-card">
+        <i data-lucide="award" class="stat-icon"></i>
+        <div class="stat-info">
+          <h3 class="stat-title">UAE Award Winner</h3>
+          <p class="stat-subtitle">Outstanding Nigerian Jeweler in UAE 2024</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <i data-lucide="globe" class="stat-icon"></i>
+        <div class="stat-info">
+          <h3 class="stat-title">Worldwide Delivery</h3>
+          <p class="stat-subtitle">Insured shipping from Dubai & Lagos</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <i data-lucide="shield-check" class="stat-icon"></i>
+        <div class="stat-info">
+          <h3 class="stat-title">Unalloyed Trust</h3>
+          <p class="stat-subtitle">100% Authentic Italian Silver & Gold</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-card">
+        <i data-lucide="users" class="stat-icon"></i>
+        <div class="stat-info">
+          <h3 class="stat-title">95k+ Community</h3>
+          <p class="stat-subtitle">Wholesale & retail clients globally</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Category Showcase -->
+  <section id="collections" class="collections-section">
+    <div class="section-header-wrapper">
+      <h2 class="section-title">Curated Collections</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Discover our main categories, each defined by unparalleled craftsmanship</p>
+    </div>
+    
+    <div class="collections-grid">
+      <!-- Collection 1: Sterling Silver -->
+      <div class="collection-card collection-silver" data-category="silver">
+        <div class="collection-overlay"></div>
+        <div class="collection-bg" style="background-image: url('/assets/images/silver_necklace.png');"></div>
+        <div class="collection-card-content">
+          <h3 class="collection-card-title">Italian Silver 925</h3>
+          <p class="collection-card-desc">Premium chains, tennis bracelets, and heavy-duty designs.</p>
+          <span class="collection-cta-link">Explore Pieces <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+      
+      <!-- Collection 2: Fine Gold -->
+      <div class="collection-card collection-gold" data-category="gold">
+        <div class="collection-overlay"></div>
+        <div class="collection-bg" style="background-image: url('/assets/images/gold_choker.png');"></div>
+        <div class="collection-card-content">
+          <h3 class="collection-card-title">Pure Dubai Gold</h3>
+          <p class="collection-card-desc">Chokers, traditional filigree rings, and 18K-24K yellow gold.</p>
+          <span class="collection-cta-link">Explore Pieces <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- Collection 3: Diamonds -->
+      <div class="collection-card collection-diamonds" data-category="diamonds">
+        <div class="collection-overlay"></div>
+        <div class="collection-bg" style="background-image: url('/assets/images/bridal_set.png');"></div>
+        <div class="collection-card-content">
+          <h3 class="collection-card-title">Diamond Treasures</h3>
+          <p class="collection-card-desc">Dazzling engagement bands, VVS solitaire rings, and stud earrings.</p>
+          <span class="collection-cta-link">Explore Pieces <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- Collection 4: Watches -->
+      <div class="collection-card collection-watches" data-category="watches">
+        <div class="collection-overlay"></div>
+        <div class="collection-bg" style="background-image: url('/assets/images/luxury_watch.png');"></div>
+        <div class="collection-card-content">
+          <h3 class="collection-card-title">Luxury Timepieces</h3>
+          <p class="collection-card-desc">Automatic oyster steel watches, diamond bezels, and Swiss movements.</p>
+          <span class="collection-cta-link">Explore Pieces <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Catalog -->
+  <section id="catalog" class="catalog-section">
+    <div class="section-header-wrapper">
+      <h2 class="section-title">The Signature Shop</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">Exquisite retail items available for immediate worldwide delivery</p>
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div class="catalog-toolbar">
+      <div class="filter-pills-container" id="filter-pills-area">
+        <button class="filter-pill active" data-filter="all">All Creations</button>
+        <button class="filter-pill" data-filter="silver">Sterling Silver</button>
+        <button class="filter-pill" data-filter="gold">Dubai Gold</button>
+        <button class="filter-pill" data-filter="diamonds">Diamonds</button>
+        <button class="filter-pill" data-filter="watches">Timepieces</button>
+      </div>
+
+      <div class="toolbar-sort-search">
+        <div class="sort-selector-wrapper">
+          <label for="catalog-sort-select" class="sr-only">Sort by:</label>
+          <select id="catalog-sort-select" aria-label="Sort products">
+            <option value="featured">Featured Creations</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Search/Filter Notification -->
+    <div id="active-results-summary" class="search-summary-text hidden-summary">
+      Showing <span id="summary-count">8</span> results for "<span id="summary-text"></span>"
+    </div>
+
+    <!-- Catalog Grid -->
+    <div class="catalog-grid" id="catalog-products-grid">
+      <!-- Inject dynamically via index.js -->
+    </div>
+  </section>
+
+  <!-- Brand Story Section -->
+  <section id="brand-story" class="story-section">
+    <div class="story-container">
+      <div class="story-visual reveal-on-scroll">
+        <div class="award-badge-container">
+          <div class="award-icon-box"><i data-lucide="award"></i></div>
+          <div class="award-text">
+            <h4>Outstanding Jeweler</h4>
+            <p>Dubai & UAE (2024)</p>
+          </div>
+        </div>
+        <img src="/assets/images/hero_bg.png" alt="Fatrich Luxury Boutique Display" class="story-main-image">
+      </div>
+      
+      <div class="story-content reveal-on-scroll">
+        <div class="accent-gold font-serif italic-text">Unalloyed Trust & Heritage</div>
+        <h2 class="section-title text-left">From Nigeria to Dubai & Beyond</h2>
+        <div class="section-line left-aligned"></div>
+        <p class="story-paragraph">
+          Founded under the vision of <strong>Hajia Fatimah</strong> (Okandeji Fatimoh Morenike), <strong>Fatrich Accessories Trading LLC</strong> has grown from a prestigious boutique into a globally recognized luxury jewelry brand. 
+        </p>
+        <p class="story-paragraph">
+          Our core ethos is **Unalloyed Trust** and premium material integrity. Specializing in Italian 925 sterling silver, Dubai gold, and luxury watches, we deliver high-fashion jewelry with certificate guarantees and a strict **No-Scam policy**.
+        </p>
+        <p class="story-paragraph">
+          In 2024, our dedication was recognized at the highest level when we were awarded the **"Outstanding Nigerian Jeweler of the Year in UAE"** by the Iconic Cosmopolitan Business Award.
+        </p>
+        <div class="founder-signature-block">
+          <span class="founder-title">Founder & CEO</span>
+          <h4 class="founder-name">Hajia Fatimah Morenike</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Consultation / Wholesale Section -->
+  <section id="custom-order" class="custom-order-section">
+    <div class="custom-order-container">
+      <div class="custom-order-info">
+        <h2 class="section-title text-left accent-gold">Custom Designs & Wholesale</h2>
+        <p class="custom-order-description">
+          Looking for a custom-crafted diamond bridal set, bulk 925 silver for wholesale, or unique corporate timepieces? Our master artisans in Dubai are ready to bring your vision to life.
+        </p>
+        <div class="benefits-inquiries">
+          <div class="benefit-item">
+            <i data-lucide="check-circle" class="benefit-icon"></i>
+            <span>Flexible wholesale tiers for global retailers.</span>
+          </div>
+          <div class="benefit-item">
+            <i data-lucide="check-circle" class="benefit-icon"></i>
+            <span>Certified 925 sterling silver, 18K/21K/22K gold.</span>
+          </div>
+          <div class="benefit-item">
+            <i data-lucide="check-circle" class="benefit-icon"></i>
+            <span>Live video consultations directly from Dubai boutique.</span>
+          </div>
+        </div>
+        <div class="direct-contact-links">
+          <h4>Or contact us directly:</h4>
+          <a href="https://wa.me/2347000000000" class="direct-link-btn whatsapp-btn" target="_blank">
+            <i data-lucide="message-circle"></i> Chat on WhatsApp
+          </a>
+          <a href="https://www.instagram.com/fatimah_jewellery" class="direct-link-btn instagram-btn" target="_blank">
+            <i data-lucide="instagram"></i> Follow on Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Inquiry Form -->
+      <div class="custom-order-form-container">
+        <form id="jewelry-inquiry-form" class="inquiry-form-glass">
+          <h3 class="form-title">Consultation Request</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Full Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-phone">WhatsApp Phone Number</label>
+              <input type="tel" id="form-phone" placeholder="+234..." required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-type">Inquiry Type</label>
+            <select id="form-type" required>
+              <option value="">Select Option</option>
+              <option value="wholesale">Wholesale Order Interest</option>
+              <option value="custom">Custom Jewelry Design</option>
+              <option value="general">Retail Inquiry / Booking</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="form-message">Describe Your Requirements</label>
+            <textarea id="form-message" rows="4" placeholder="Describe the materials, sizes, quantities or design specifications you require..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full-width">Submit Consultation Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sliding Shopping Cart Drawer (Right Side) -->
+  <div id="cart-drawer-overlay" class="cart-overlay-mask"></div>
+  <aside id="cart-drawer" class="cart-sidebar-drawer" aria-labelledby="cart-drawer-title">
+    <div class="cart-drawer-header">
+      <h2 id="cart-drawer-title">Your Order Cart</h2>
+      <button id="cart-drawer-close" class="utility-btn" aria-label="Close Cart">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    
+    <div class="cart-drawer-items" id="cart-items-container">
+      <!-- Dynamic list of products added -->
+      <div class="empty-cart-state">
+        <i data-lucide="shopping-bag" class="empty-cart-icon"></i>
+        <p>Your jewelry cart is empty.</p>
+        <a href="#catalog" class="btn btn-secondary btn-sm" id="cart-back-to-shop">Start Browsing</a>
+      </div>
+    </div>
+    
+    <div class="cart-drawer-footer" id="cart-summary-footer">
+      <div class="cart-summary-row">
+        <span>Cart Subtotal</span>
+        <span id="cart-subtotal-price">$0.00</span>
+      </div>
+      <p class="cart-shipping-note"><i data-lucide="truck"></i> Complimentary insured shipping applied.</p>
+      
+      <div class="cart-checkout-actions">
+        <button id="checkout-whatsapp-btn" class="btn btn-whatsapp-checkout btn-full-width">
+          <i data-lucide="message-circle"></i> Place Order via WhatsApp
+        </button>
+        <button id="checkout-direct-btn" class="btn btn-secondary btn-full-width">
+          Submit as Inquiry Invoice
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product Detail Modal (Center Backdrop) -->
+  <div id="product-detail-modal" class="modal-backdrop-mask" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Details Modal">
+        <i data-lucide="x"></i>
+      </button>
+      
+      <div class="modal-body-content">
+        <!-- Visuals Column -->
+        <div class="modal-visual-column">
+          <img id="modal-product-img" src="" alt="">
+        </div>
+        
+        <!-- Info Column -->
+        <div class="modal-info-column">
+          <span id="modal-product-tag" class="product-tag-category">Sterling Silver</span>
+          <h2 id="modal-product-title" class="modal-item-title">Italian Silver Rope Chain</h2>
+          <div id="modal-product-price" class="modal-item-price">$140.00</div>
+          
+          <div class="modal-divider"></div>
+          
+          <p id="modal-product-description" class="modal-item-desc">
+            A premium rope chain meticulously crafted in Italy with diamond-cut links...
+          </p>
+          
+          <!-- Specifications -->
+          <div class="product-specs-section">
+            <h4 class="specs-heading">Specifications</h4>
+            <ul id="modal-product-specs" class="specs-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+          
+          <div class="modal-divider"></div>
+          
+          <!-- Interaction Row -->
+          <div class="modal-action-row">
+            <div class="quantity-picker">
+              <button id="modal-qty-minus" aria-label="Decrease quantity"><i data-lucide="minus"></i></button>
+              <span id="modal-qty-val">1</span>
+              <button id="modal-qty-plus" aria-label="Increase quantity"><i data-lucide="plus"></i></button>
+            </div>
+            <button id="modal-add-to-cart-btn" class="btn btn-primary flex-grow-btn">
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="modal-extra-actions">
+            <button id="modal-whatsapp-inquire-btn" class="btn btn-outline-whatsapp">
+              <i data-lucide="message-circle"></i> Instant WhatsApp Inquiry
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div id="toast-notification-hub" class="toast-hub">
+    <!-- Populated dynamically via JS -->
+  </div>
+
+  <!-- Premium Footer -->
+  <footer class="luxury-footer">
+    <div class="footer-top-container">
+      <div class="footer-brand">
+        <div class="logo-area">
+          <img src="/assets/images/logo.png" alt="Fatrich Jewelry Logo" class="brand-logo">
+          <span class="brand-name">FATRICH <span class="accent-gold">JEWELRY</span></span>
+        </div>
+        <p class="brand-bio">
+          Award-winning wholesale and retail jeweler specializing in Italian Sterling Silver (925), fine Gold, and Luxury Watches. Operating globally from Dubai and Lagos.
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/fatimah_jewellery" class="social-icon-btn" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+          <a href="https://wa.me/2347000000000" class="social-icon-btn" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" class="social-icon-btn" aria-label="TikTok"><i data-lucide="video"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-link-group">
+        <h4 class="footer-heading">Navigations</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#catalog">Shop Catalog</a></li>
+          <li><a href="#brand-story">Our Story</a></li>
+          <li><a href="#custom-order">Wholesale Inquiry</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-link-group">
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog" class="category-footer-link" data-filter="silver">925 Sterling Silver</a></li>
+          <li><a href="#catalog" class="category-footer-link" data-filter="gold">Dubai Gold Collection</a></li>
+          <li><a href="#catalog" class="category-footer-link" data-filter="diamonds">Exquisite Diamonds</a></li>
+          <li><a href="#catalog" class="category-footer-link" data-filter="watches">Luxury Timepieces</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-link-group">
+        <h4 class="footer-heading">Dubai Head Office</h4>
+        <ul class="footer-contact">
+          <li>
+            <i data-lucide="map-pin"></i>
+            <span>Fatrich Accessories Trading LLC,<br>Deira Gold Souk, Dubai, United Arab Emirates</span>
+          </li>
+          <li>
+            <i data-lucide="clock"></i>
+            <span>Monday - Saturday: 10:00 AM - 9:00 PM</span>
+          </li>
+          <li>
+            <i data-lucide="mail"></i>
+            <span>sales@fatrichjewelry.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>&copy; 2026 Fatrich Accessories Trading LLC (Fatimah Jewellery). All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="/index.js" type="module"></script>
+</body>
+</html>
